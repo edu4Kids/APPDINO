@@ -2,7 +2,6 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/AgeText"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".RegisterActivity">
@@ -10,14 +9,15 @@
     <Button
         android:id="@+id/registerButton"
         android:layout_width="305dp"
-        android:layout_height="43dp"
+        android:layout_height="0dp"
         android:layout_marginStart="43dp"
-        android:layout_marginTop="68dp"
         android:layout_marginEnd="63dp"
+        android:layout_marginBottom="279dp"
         android:text="회원가입"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+        app:layout_constraintTop_toBottomOf="@+id/passwordText" />
 
     <EditText
         android:id="@+id/idText"
@@ -36,12 +36,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="63dp"
-        android:layout_marginTop="21dp"
+        android:layout_marginTop="152dp"
+        android:layout_marginBottom="212dp"
         android:ems="10"
         android:hint="비밀번호"
         android:inputType="numberPassword"
+        app:layout_constraintBottom_toTopOf="@+id/registerButton"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idText" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/nicknameText"
@@ -56,15 +58,14 @@
         app:layout_constraintTop_toBottomOf="@+id/passwordText" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/ageText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="63dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="10dp"
         android:ems="10"
-        android:hint="이름"
+        android:hint="나이"
         android:inputType="textPersonName"
-        android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nicknameText" />
 

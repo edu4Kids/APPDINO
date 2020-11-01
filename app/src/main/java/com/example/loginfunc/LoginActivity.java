@@ -22,14 +22,22 @@ import android.widget.TextView;
         EditText passwordText = (EditText) findViewById(R.id.passwordText);
 
         Button loginButton = (Button) findViewById(R.id.loginButton);
-        Button registerButton = (Button) findViewById(R.id.registerButton);
+        Button registerButton = (Button)findViewById(R.id.registerButton);
+        registerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this,RegisterActivity.class);
+                startActivity(intent);
 
-        registerButton.setOnClickListener(new Button.OnClickListener() {
-            public void onClick(View v){
-                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
-                 startActivity(intent);
             }
-            }
-            );
         }
-}
+
+
+
+        );
+    }
+            }
+
+
+
+
