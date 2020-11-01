@@ -26,7 +26,7 @@ public class RegisterActivity extends AppCompatActivity {
         final EditText idText = (EditText) findViewById(R.id.idText);
         final EditText passwordText = (EditText) findViewById(R.id.passwordText);
         final EditText nicknameText = (EditText) findViewById(R.id.nicknameText);
-        final EditText AgeText = (EditText) findViewById(R.id.ageText);
+        final EditText ageText = (EditText) findViewById(R.id.ageText);
 
 
         Button registerButton = (Button) findViewById(R.id.registerButton);
@@ -38,7 +38,7 @@ public class RegisterActivity extends AppCompatActivity {
                 String userID = idText.getText().toString();
                 String userPassword = passwordText.getText().toString();
                 String usernickName = nicknameText.getText().toString();
-                int userAge = ageText.getText().toString();
+                int userAge = Integer.parseInt(ageText.getText().toString());
 
                 Response.Listener<String> responseListener = new Response.Listener<String>(){
                     @Override
@@ -48,7 +48,7 @@ public class RegisterActivity extends AppCompatActivity {
                             boolean success = jsonResponse.getBoolean("success");
                             if (success){
                                 AlertDialog.Builder builder = new AlertDialog.Builder(RegisterActivity.this);
-                                builder.setMessage("화원 등록에 성공했습니다.")
+                                builder.setMessage("회원 등록에 성공했습니다.")
                                         .setPositiveButton("확인",null)
                                         .create()
                                         .show();
