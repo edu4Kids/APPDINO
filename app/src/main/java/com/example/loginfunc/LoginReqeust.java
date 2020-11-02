@@ -7,18 +7,16 @@ import com.android.volley.toolbox.StringRequest;
 import java.util.HashMap;
 import java.util.Map;
 
-public class RegisterReqeust extends StringRequest {
+public class LoginReqeust extends StringRequest {
 
-    final static private String URL = "http://dustn1259.cafe24.com/Register.php";
+    final static private String URL = "http://dustn1259.cafe24.com/Login.php";
     private Map<String, String> map;
 
-    public RegisterReqeust(String userID, String userPassword, String usernickName, int userAge, Response.Listener<String> listener) {
+    public LoginReqeust(String userID, String userPassword, Response.Listener<String> listener) {
         super(Method.POST, URL, listener, null);
         map = new HashMap<>();
         map.put("userID", userID);
         map.put("userPassword", userPassword);
-        map.put("usernickName", usernickName);
-        map.put("userAge", userAge + "");
 
 
     }

@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -18,15 +19,17 @@ import org.json.JSONObject;
 
 public class RegisterActivity extends AppCompatActivity {
 
+
+    private EditText idText,passwordText,nicknameText, ageText;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        final EditText idText = (EditText) findViewById(R.id.idText);
-        final EditText passwordText = (EditText) findViewById(R.id.passwordText);
-        final EditText nicknameText = (EditText) findViewById(R.id.nicknameText);
-        final EditText ageText = (EditText) findViewById(R.id.ageText);
+        idText = findViewById(R.id.idText);
+        passwordText = findViewById(R.id.passwordText);
+        nicknameText = findViewById(R.id.nicknameText);
+        ageText = findViewById(R.id.ageText);
 
 
         Button registerButton = (Button) findViewById(R.id.registerButton);
@@ -44,25 +47,21 @@ public class RegisterActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(String response){
                         try{
-                            JSONObject jsonResponse = new JSONObject(response);
-                            boolean success = jsonResponse.getBoolean("success");
+                            JSONObject jsonObject = new JSONObject(response);
+                            boolean success = jsonObject.getBoolean("success");
                             if (success){
-                                AlertDialog.Builder builder = new AlertDialog.Builder(RegisterActivity.this);
-                                builder.setMessage("회원 등록에 성공했습니다.")
-                                        .setPositiveButton("확인",null)
-                                        .create()
-                                        .show();
+                                Toast.makeText(getApplicationContext(),"회원등록에 성공했습니다.",Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(RegisterActivity.this,LoginActivity.class);
                                 startActivity(intent);
-                            }
-                            else {
-                                AlertDialog.Builder builder = new AlertDialog.Builder(RegisterActivity.this);
-                                builder.setMessage("화원 등록에 실했습니다.")
-                                        .setNegativeButton("다시 시도", null)
-                                        .create()
-                                        .show();
+
 
                             }
+
+                            else {
+                                Toast.makeText(getApplicationContext(),"회원등록에 실패했습니다.",Toast.LENGTH_SHORT).show();
+                                return;
+                            }
+
                         }
                        catch(JSONException e){
                             e.printStackTrace();
@@ -70,6 +69,7 @@ public class RegisterActivity extends AppCompatActivity {
 
                     }
                 };
+                //실제 서버로 volly통해 요
                 RegisterReqeust registerReqeust = new RegisterReqeust(userID, userPassword, usernickName, userAge, responseListener);
                 RequestQueue queue = Volley.newRequestQueue(RegisterActivity.this);
                 queue.add(registerReqeust);
