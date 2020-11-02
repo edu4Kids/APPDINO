@@ -9,21 +9,19 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView idText, passwordText;
+    private TextView idText, passwordText,nicknameText;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        idText = findViewById(R.id.idText);
-        passwordText = findViewById(R.id.passwordText);
-
+        nicknameText = findViewById(R.id.nicknameText);
         Intent intent = getIntent();
-        String userID = intent.getStringExtra("userID");
-        String userPassword = intent.getStringExtra("userPassword");
+        String usernickName = intent.getStringExtra("usernickName");
 
-        idText.setText(userID);
-        passwordText.setText(userPassword);
+
+
+        nicknameText.setText(usernickName);
 
     }
     }

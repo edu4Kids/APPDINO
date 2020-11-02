@@ -4,6 +4,7 @@
  
     $userID = $_POST["userID"];
     $userPassword = $_POST["userPassword"];
+    $usernickName = $_POST["usernickName"];
     
     $statement = mysqli_prepare($con, "SELECT * FROM USERS WHERE userID = ? AND userPassword = ?");
     mysqli_stmt_bind_param($statement, "ss", $userID, $userPassword);
