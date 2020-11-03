@@ -16,7 +16,7 @@ public class SplashScreen extends Activity {
         Window window = getWindow();
         window.setFormat(PixelFormat.RGBA_8888);
     }
-    //처음 생성 화면. */
+    //처음 생성 화면. *//
     Thread splashTread;
     @Override
     public void onCreate(Bundle savedInstanceState) {
