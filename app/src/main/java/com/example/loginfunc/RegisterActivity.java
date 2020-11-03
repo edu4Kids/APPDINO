@@ -21,6 +21,9 @@ public class RegisterActivity extends AppCompatActivity {
 
 
     private EditText idText,passwordText,nicknameText, ageText;
+    private boolean validate = false;
+    private AlertDialog dialog;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,9 +34,63 @@ public class RegisterActivity extends AppCompatActivity {
         nicknameText = findViewById(R.id.nicknameText);
         ageText = findViewById(R.id.ageText);
 
+        final Button validateButton = (Button) findViewById(R.id.validateButton);//아이디 유효성 검사
+        //아이디 중복 체크
+        validateButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                String userID = idText.getText().toString();
+                if (validate) {
+                    return; //검증 완료
+                }
+
+                if (userID.equals("")) {
+                    AlertDialog.Builder builder=new AlertDialog.Builder( RegisterActivity.this );
+                    dialog=builder.setMessage("아이디는 빈 칸일 수 없습니다")
+                            .setPositiveButton("확인",null)
+                            .create();
+                    dialog.show();
+                    return;
+                }
+
+                Response.Listener<String> responseListener = new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        try {
+                            JSONObject jsonResponse=new JSONObject(response);
+                            boolean success=jsonResponse.getBoolean("success");
+                            if(success){
+                                AlertDialog.Builder builder=new AlertDialog.Builder( RegisterActivity.this );
+                                dialog=builder.setMessage("사용할 수 있는 아이디입니다.")
+                                        .setPositiveButton("확인",null)
+                                        .create();
+                                dialog.show();
+                                idText.setEnabled(false);
+                                validate=true;
+                                validateButton.setText("확인");
+                            }
+                            else{
+                                AlertDialog.Builder builder=new AlertDialog.Builder( RegisterActivity.this );
+                                dialog=builder.setMessage("사용할 수 없는 아이디입니다.")
+                                        .setNegativeButton("확인",null)
+                                        .create();
+                                dialog.show();
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                };
+                ValidateRequest validateRequest=new ValidateRequest(userID,responseListener);
+                RequestQueue queue= Volley.newRequestQueue(RegisterActivity.this);
+                queue.add(validateRequest);
+
+            }
+        });
 
         Button registerButton = (Button) findViewById(R.id.registerButton);
-      //회원가입 버튼을 눌렀을때
+        //회원가입 버튼을 눌렀을때
         registerButton.setOnClickListener(new View.OnClickListener(){
 
             @Override
@@ -43,6 +100,10 @@ public class RegisterActivity extends AppCompatActivity {
                 String userPassword = passwordText.getText().toString();
                 String usernickName = nicknameText.getText().toString();
                 int userAge = Integer.parseInt(ageText.getText().toString());
+                if(!validate){
+                    Toast.makeText(getApplicationContext(),"중복체크 해주세요.",Toast.LENGTH_SHORT).show();
+                    return;
+                }
 
                 Response.Listener<String> responseListener = new Response.Listener<String>(){
                     @Override
@@ -64,9 +125,9 @@ public class RegisterActivity extends AppCompatActivity {
                             }
 
                         }
-                       catch(JSONException e){
+                        catch(JSONException e){
                             e.printStackTrace();
-                       }
+                        }
 
                     }
                 };
@@ -76,6 +137,7 @@ public class RegisterActivity extends AppCompatActivity {
                 queue.add(registerReqeust);
 
             }
+
         });
 
 
