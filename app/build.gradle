@@ -39,7 +39,7 @@ dependencies {
     implementation 'com.android.volley:volley:1.1.1'
     //뷰페이저2
     implementation "androidx.viewpager2:viewpager2:1.0.0"
-    //인디케이터 애니메이션
+    //인디케이터 애니메이션//
     implementation 'com.tbuonomo.andrui:viewpagerdotsindicator:4.1.2'
 
 }
