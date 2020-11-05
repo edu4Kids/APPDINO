@@ -46,7 +46,10 @@ public class SettingActivity extends AppCompatActivity {
                             public void onClick(DialogInterface dialog, int whichButton) {
                                 Intent i = new Intent(SettingActivity.this/*현재 액티비티 위치*/ , LoginActivity.class/*이동 액티비티 위치*/);
                                 i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                                i.putExtra("userID","vv");
+                                i.putExtra("userPassword","cc");
                                 startActivity(i);
+
                             }
                         })
                         .setNegativeButton("취소", new DialogInterface.OnClickListener() {

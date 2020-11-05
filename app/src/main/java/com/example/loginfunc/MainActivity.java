@@ -22,6 +22,9 @@ public class MainActivity extends AppCompatActivity {
         nicknameText = findViewById(R.id.nicknameText);
         Intent intent = getIntent();
         String usernickName = intent.getStringExtra("usernickName");
+        String userID = intent.getStringExtra("userID");
+        String userPassword = intent.getStringExtra("userPassword");
+
 
 
 
@@ -29,10 +32,14 @@ public class MainActivity extends AppCompatActivity {
 
         gosetBtn = findViewById(R.id.gosetBtn);
         gosetBtn.setOnClickListener(new View.OnClickListener() {
+
             @Override
-            //회원가입 버튼 클릭했을 때
+            //set 버튼 클릭했을 때
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this,SettingActivity.class); //로그인 버튼 클릭시 RegisterActivty로 이동
+                intent.putExtra("userId",userID);
+                intent.putExtra("userPassword",userPassword);
+                intent.putExtra("usernickName",usernickName);
                 startActivity(intent);
 
             }
