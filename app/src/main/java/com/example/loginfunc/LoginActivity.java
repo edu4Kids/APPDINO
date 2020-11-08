@@ -24,7 +24,7 @@ import org.json.JSONObject;
  public class LoginActivity extends Activity {
      private EditText idText,passwordText;
      private Button loginButton, registerButton;
-     private CheckBox autoCheck ;
+
 
 
    SessionManager sessionManager;
@@ -39,7 +39,7 @@ import org.json.JSONObject;
 
         idText =  findViewById(R.id.idText);
         passwordText = findViewById(R.id.passwordText);
-        autoCheck = findViewById(R.id.autoCheck);
+
 
 
         sessionManager = new SessionManager(getApplicationContext());
@@ -88,6 +88,7 @@ import org.json.JSONObject;
                                 sessionManager.setLogin(true);
                                 sessionManager.setUserID(userID);
                                 sessionManager.setUserPassword(userPassword);
+                                sessionManager.setUserNickname(usernickName);
                                // //intent.putExtra는 화면이동할 때 값전달시 사용 ==> 화면 이동시 main화면에 nickname값이 뜰 수 있게 intent.putExtra를 활용하여 값 전달
                                 // 형식은 map과 같음
                                startActivity(new Intent(getApplicationContext(),MainActivity.class));

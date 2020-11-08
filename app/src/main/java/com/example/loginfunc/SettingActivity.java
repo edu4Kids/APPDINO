@@ -54,7 +54,8 @@ public class SettingActivity extends AppCompatActivity {
                             public void onClick(DialogInterface dialog, int whichButton) {
                                sessionManager.setLogin(false);
                                sessionManager.setUserID("");
-                                sessionManager.setUserPassword("");
+                               sessionManager.setUserPassword("");
+                                sessionManager.setUserNickname("");
                                 startActivity(new Intent(getApplicationContext(),LoginActivity.class));
                                 finish();
 
