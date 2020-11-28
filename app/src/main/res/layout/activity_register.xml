@@ -1,81 +1,227 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterActivity">
 
-    <Button
-        android:id="@+id/registerButton"
-        android:layout_width="305dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="39dp"
-        android:layout_marginEnd="67dp"
-        android:layout_marginBottom="195dp"
-        android:text="회원가입"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/idText"
-        android:layout_width="0dp"
+    tools:context=".RegisterActivity"
+    android:background="#fdcc31">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="70dp">
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="104dp"
-        android:ems="10"
-        android:hint="이메일"
-        android:inputType="textEmailAddress"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:paddingLeft="59dp"
+        android:layout_marginTop="71dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:letterSpacing="-0.05"
+            android:lineSpacingExtra="15dp"
+            android:text="디노와 시노\n간편 회원가입"
+            android:textColor="#000000"
+            android:textSize="30dp"
+            android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/nicknameText"
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="41dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="54dp"
+            android:fontFamily="sans-serif"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:textColor="#000000"
+            android:letterSpacing="-0.05"
+            android:lineSpacingExtra="3sp"
+            android:text="이메일"
+            />
+        </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/idText"
+            android:layout_marginTop="3dp"
+            android:layout_width="291dp"
+            android:layout_height="45dp"
+            android:background="@drawable/rec_shape"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="34dp"
+            android:ems="10"
+            android:paddingLeft="20dp"/>
+
+        <Button
+            android:id="@+id/validateButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="219dp"
+            android:layout_marginRight="71dp"
+            android:text="아이디확인"
+            android:background="#00ff0000"
+            app:layout_constraintStart_toEndOf="@+id/idText" />
+
+
+        />
+
+</RelativeLayout>
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="37dp"
-        android:ems="10"
-        android:hint="닉네임"
-        android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordText" />
+        android:layout_marginTop="41dp"
+        android:layout_centerVertical="true">
 
-    <EditText
-        android:id="@+id/ageText"
-        android:layout_width="wrap_content"
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="54dp"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:textColor="#000000"
+            android:letterSpacing="-0.05"
+            android:lineSpacingExtra="3sp"
+            android:text="비밀번호"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="31dp"
-        android:ems="10"
-        android:hint="나이"
-        android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nicknameText" />
+        android:layout_marginTop="3dp"
+        >
+        <EditText
+            android:id="@+id/passwordText"
+            android:layout_width="291dp"
+            android:layout_height="45dp"
+            android:background="@drawable/rec_shape"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="34dp"
+            android:ems="10"
+            android:paddingLeft="20dp"
 
-    <EditText
-        android:id="@+id/passwordText"
-        android:layout_width="wrap_content"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="36dp"
-        android:ems="10"
-        android:hint="비밀번호"
-        android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idText" />
+        android:layout_marginTop="41dp"
+        android:layout_centerVertical="true">
 
-    <Button
-        android:id="@+id/validateButton"
-        android:layout_width="wrap_content"
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="54dp"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:textColor="#000000"
+            android:letterSpacing="-0.05"
+            android:lineSpacingExtra="3sp"
+            android:text="닉네임"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="13dp"
-        android:layout_marginTop="104dp"
-        android:layout_marginEnd="16dp"
-        android:text="아이디확인"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/idText"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="3dp"
+        >
+        <EditText
+            android:id="@+id/nicknameText"
+            android:layout_width="291dp"
+            android:layout_height="45dp"
+            android:background="@drawable/rec_shape"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="34dp"
+            android:ems="10"
+            android:paddingLeft="20dp"
+           />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="41dp"
+        android:layout_centerVertical="true">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="54dp"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:textColor="#000000"
+            android:letterSpacing="-0.05"
+            android:lineSpacingExtra="3sp"
+            android:text="나이"
+            />
+
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+       >
+        <EditText
+            android:id="@+id/ageText"
+            android:layout_width="291dp"
+            android:layout_height="45dp"
+            android:background="@drawable/rec_shape"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="34dp"
+            android:ems="10"
+            android:paddingLeft="20dp"
+          />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_centerVertical="true"
+        android:paddingLeft="35dp"
+        >
+
+            <Button
+                android:id="@+id/registerButton"
+                android:layout_width="291dp"
+                android:layout_height="45dp"
+                android:layout_alignParentBottom="true"
+                android:text="회원가입"
+                android:textColor="#ffffff"
+                android:background="@drawable/yrec_shape"
+                android:stateListAnimator="@null"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
