@@ -96,9 +96,6 @@
                 android:layout_marginRight="34dp"
                 android:ems="10"
                 android:paddingLeft="20dp"
-                android:inputType="textPassword"
-
-
 
 
                 />
@@ -122,6 +119,9 @@
                 android:fontFamily="sans-serif"
                 android:background="@drawable/prec_shape"
                 android:stateListAnimator="@null"/>
+
+
+
 
         </LinearLayout>
 

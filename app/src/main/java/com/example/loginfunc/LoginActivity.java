@@ -24,10 +24,10 @@ import org.json.JSONObject;
  public class LoginActivity extends Activity {
      private EditText idText,passwordText;
      private Button loginButton, registerButton;
+     public SharedPreferences prefs;
 
 
-
-   SessionManager sessionManager;
+     SessionManager sessionManager;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -47,6 +47,7 @@ import org.json.JSONObject;
 
         loginButton =  findViewById(R.id.loginButton);
        registerButton = findViewById(R.id.registerButton);
+
        registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             //회원가입 버튼 클릭했을 때
@@ -69,6 +70,9 @@ import org.json.JSONObject;
            //로그인 버튼 클릭했을 때
            public void onClick(View view) {
 
+               SharedPreferences pref = getSharedPreferences("checkFirst",Activity.MODE_PRIVATE);
+               boolean checkFirst = pref.getBoolean("checkFirst",false);
+
                String userID = idText.getText().toString().trim(); //사용자가 적은 값 get해와라
                String userPassword = passwordText.getText().toString().trim();
 
@@ -89,9 +93,26 @@ import org.json.JSONObject;
                                 sessionManager.setUserID(userID);
                                 sessionManager.setUserPassword(userPassword);
                                 sessionManager.setUserNickname(usernickName);
+
                                // //intent.putExtra는 화면이동할 때 값전달시 사용 ==> 화면 이동시 main화면에 nickname값이 뜰 수 있게 intent.putExtra를 활용하여 값 전달
                                 // 형식은 map과 같음
-                               startActivity(new Intent(getApplicationContext(),MainActivity.class));
+
+                               prefs = getSharedPreferences("Pref", MODE_PRIVATE);
+                               boolean checkFirst = prefs.getBoolean("checkFirst", false);
+                                 if (checkFirst ==false ){
+                                     SharedPreferences.Editor editor = pref.edit();
+                                     editor.putBoolean("checkFisrt",true);
+                                     editor.commit();
+
+                                     Intent intent1 = new Intent(LoginActivity.this,GuideActivity.class);
+                                     startActivity(intent1);
+                                     finish();
+                                 }
+                          else {
+                                     startActivity(new Intent(getApplicationContext(), MainActivity.class));
+
+
+                                 }
                                intent.putExtra("userId",userID);
                                intent.putExtra("userPassword",userPassword);
                                intent.putExtra("usernickName",usernickName);
@@ -100,17 +121,17 @@ import org.json.JSONObject;
 
                            }
                            else {
-                               Toast.makeText(getApplicationContext(),"로그에 실패했습니다.",Toast.LENGTH_SHORT).show();
+                               Toast.makeText(getApplicationContext(),"로그인에 실패했습니다.",Toast.LENGTH_SHORT).show();
                                return;
                            }
 
                        }
                        catch(JSONException e){
                            e.printStackTrace();
-                           Toast.makeText(getApplicationContext(),"fail.",Toast.LENGTH_SHORT).show();
                        }
                    }
                };
+
 
                //volly활용해서 실제 서버요청
                LoginReqeust loginReqeust = new LoginReqeust(userID,userPassword,responseListener);

@@ -43,6 +43,7 @@ public class SettingActivity extends AppCompatActivity {
         String userID = sessionManager.getUserID();
         String userPassword = sessionManager.getUserPassword();
 
+
         //아이디 중복 체크
         logoutButton.setOnClickListener(new View.OnClickListener() { //로그아웃 버튼 클
 
