@@ -107,6 +107,7 @@ import org.json.JSONObject;
                        }
                        catch(JSONException e){
                            e.printStackTrace();
+                           Toast.makeText(getApplicationContext(),"fail.",Toast.LENGTH_SHORT).show();
                        }
                    }
                };
