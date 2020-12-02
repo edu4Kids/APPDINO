@@ -1,15 +1,13 @@
 package com.example.loginfunc;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
-public class ViewPagerAdpater extends FragmentPagerAdapter {
-    private GuideActivity activity;
-
-    public ViewPagerAdpater(@NonNull FragmentManager fm, GuideActivity activity) {
+public class ViewPagerAdpater_storytelling extends FragmentPagerAdapter {
+    private StorytellingActivity activity;
+    public ViewPagerAdpater_storytelling(@NonNull FragmentManager fm, StorytellingActivity activity) {
         super(fm);
 
         this.activity = activity;
@@ -20,11 +18,11 @@ public class ViewPagerAdpater extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                return FragMonday.newInstance(activity);
+                return FragStory1.newInstance();
             case 1:
-                return FragTuesday.newInstance(activity);
+                return FragStory2.newInstance();
             case 2:
-                return FragWednesday.newInstance(activity);
+                return FragStory3.newInstance(activity);
             default:
                 return null;
         }
@@ -35,5 +33,4 @@ public class ViewPagerAdpater extends FragmentPagerAdapter {
         return 3;
     }
 
-    //상단 탭 레이아웃 인디케이터 선언
 }

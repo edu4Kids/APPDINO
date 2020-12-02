@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/guide_bg3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scaleX="1.1"
+    android:background="@drawable/guide_bg3"
+    >
+
+
+    <ImageView
+        android:id="@+id/foodmenu"
+        android:scaleY="1.2"
+        android:scaleX="1.2"
+        android:layout_width="312dp"
+        android:layout_height="210dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="512dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="38dp"
+        android:src="@drawable/foodmenu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/guide_turn3"
+        android:layout_width="76dp"
+        android:layout_height="89dp"
+        android:layout_marginStart="27.6dp"
+        android:layout_marginTop="439.1dp"
+        android:layout_marginEnd="257.2dp"
+        android:layout_marginBottom="232.1dp"
+        android:src="@drawable/guide_turn2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/foodsino"
+        android:layout_width="166dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="97dp"
+        android:layout_marginTop="400dp"
+        android:layout_marginEnd="97dp"
+        android:layout_marginBottom="341dp"
+        android:src="@drawable/food_sino"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/foodwithsino"
+        android:layout_width="133dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="114dp"
+        android:layout_marginTop="433dp"
+        android:layout_marginEnd="113dp"
+        android:layout_marginBottom="301dp"
+        android:src="@drawable/foodwithsino"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/guide_button3"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="287dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="666dp"
+        android:background="@drawable/guide_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

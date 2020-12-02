@@ -44,22 +44,24 @@
                 android:textColor="#000000"
                 android:letterSpacing="-0.05"
                 android:lineSpacingExtra="3sp"
-                android:text="이메일"
+                android:text="아이디"
                 />
         </LinearLayout>
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <EditText
                 android:id="@+id/idText"
-                android:layout_marginTop="3dp"
                 android:layout_width="291dp"
                 android:layout_height="45dp"
-                android:background="@drawable/rec_shape"
                 android:layout_marginLeft="35dp"
+
+                android:layout_marginTop="3dp"
                 android:layout_marginRight="34dp"
+                android:background="@drawable/rec_shape"
                 android:ems="10"
-                android:paddingLeft="20dp"/>
+                android:paddingLeft="20dp" />
 
         </RelativeLayout>
 
@@ -79,6 +81,7 @@
                 android:letterSpacing="-0.05"
                 android:lineSpacingExtra="3sp"
                 android:text="비밀번호"
+
                 />
 
         </LinearLayout>
@@ -96,7 +99,7 @@
                 android:layout_marginRight="34dp"
                 android:ems="10"
                 android:paddingLeft="20dp"
-
+                android:inputType="textPassword"
 
                 />
         </LinearLayout>

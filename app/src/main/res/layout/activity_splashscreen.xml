@@ -1,17 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lin_lay"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="#FF5722"
     android:layout_gravity="center"
-    android:id="@+id/lin_lay"
+    android:background="#FFFFFF"
     android:gravity="center"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/splash"
-        android:background="@drawable/splash_img" />
+        android:id="@+id/splash_sino_and_dino"
+        android:layout_width="360dp"
+        android:layout_height="380dp"
+        android:layout_marginTop="470dp"
+        android:scaleType="fitCenter"
+        android:scaleX="2.85"
+        android:scaleY="2.6"
+        android:src="@drawable/splash_sino_and_dino"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</LinearLayout>
+    <ImageView
+        android:id="@+id/splash_name1"
+        android:layout_width="263dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="152dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="546dp"
+        android:src="@drawable/splash_name1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/splash_name2"
+        android:layout_width="102dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="129dp"
+        android:layout_marginTop="129dp"
+        android:layout_marginEnd="129dp"
+        android:layout_marginBottom="610dp"
+        android:scaleType="centerInside"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        android:src="@drawable/splash_name2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

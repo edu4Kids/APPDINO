@@ -104,7 +104,7 @@ import org.json.JSONObject;
                                      editor.putBoolean("checkFisrt",true);
                                      editor.commit();
 
-                                     Intent intent1 = new Intent(LoginActivity.this,GuideActivity.class);
+                                     Intent intent1 = new Intent(LoginActivity.this, StorytellingActivity.class);
                                      startActivity(intent1);
                                      finish();
                                  }
