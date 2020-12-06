@@ -6,15 +6,26 @@
     android:layout_height="match_parent"
     tools:context=".SettingActivity">
 
+    <ImageView
+        android:id="@+id/background_circle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="36dp"
+        android:src="@drawable/background_circle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/logoutButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="150dp"
-        android:layout_marginTop="201dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="173dp"
         android:text="로그아웃"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nicknameText" />
 
@@ -22,10 +33,46 @@
         android:id="@+id/nicknameText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="176dp"
-        android:layout_marginEnd="140dp"
+        android:layout_marginTop="344dp"
+        android:layout_marginEnd="132dp"
         android:text="nickname"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/prior_button"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="275dp"
+        android:layout_marginBottom="666dp"
+        android:background="@drawable/prior_button"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/setting_text"
+        android:layout_width="40dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="163dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="162dp"
+        android:layout_marginBottom="676dp"
+        android:text="설정"
+        android:textAlignment="viewStart"
+        android:textColor="#9f59c0"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lineHeight="20sp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

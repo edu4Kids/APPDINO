@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView nicknameText;
     private Button gosetBtn;
+    private Button gotoGuide;
   SessionManager sessionManager;
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
@@ -45,7 +46,16 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("userPassword",userPassword);
                 intent.putExtra("usernickName",usernickName);
                 startActivity(intent);
+                overridePendingTransition(0, 0);
 
+            }
+        });
+
+        gotoGuide = findViewById(R.id.gotoGuide);
+        gotoGuide.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view){
+                Intent intent1 = new Intent(MainActivity.this, GuideActivity.class);
+                startActivity(intent1);
             }
         });
 

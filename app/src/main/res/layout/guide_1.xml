@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/guide_1"
-    android:scaleX="1.1"
     >
 
     <ImageView
@@ -13,24 +12,24 @@
         android:layout_width="312dp"
         android:layout_height="105dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="140dp"
+        android:layout_marginTop="120dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="515dp"
         android:scaleType="centerInside"
+        android:scaleX="1.6"
+        android:scaleY="1.6"
         android:src="@drawable/guide_profile"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:scaleX="1.5"
-        android:scaleY="1.5"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="63dp"
         android:layout_height="80dp"
         android:layout_marginStart="44dp"
-        android:layout_marginTop="245dp"
+        android:layout_marginTop="225dp"
         android:layout_marginEnd="253dp"
         android:layout_marginBottom="435dp"
         android:src="@drawable/guide_turn"
@@ -44,7 +43,7 @@
         android:layout_width="110dp"
         android:layout_height="25dp"
         android:layout_marginStart="125dp"
-        android:layout_marginTop="309dp"
+        android:layout_marginTop="289dp"
         android:layout_marginEnd="125dp"
         android:layout_marginBottom="426dp"
         android:src="@drawable/guide_de"
@@ -58,7 +57,7 @@
         android:layout_width="206dp"
         android:layout_height="41dp"
         android:layout_marginStart="77dp"
-        android:layout_marginTop="345dp"
+        android:layout_marginTop="325dp"
         android:layout_marginEnd="77dp"
         android:layout_marginBottom="374dp"
         android:src="@drawable/guide_de2"
@@ -68,14 +67,28 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/guide_button"
+        android:id="@+id/guide_button4"
         android:layout_width="46dp"
         android:layout_height="46dp"
         android:layout_marginStart="287dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="29dp"
         android:layout_marginEnd="27dp"
-        android:layout_marginBottom="666dp"
+        android:layout_marginBottom="665dp"
         android:background="@drawable/guide_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/guide_spot1"
+        android:layout_width="45dp"
+        android:layout_height="8dp"
+        android:layout_marginStart="158dp"
+        android:layout_marginTop="710dp"
+        android:layout_marginEnd="157dp"
+        android:layout_marginBottom="22dp"
+        android:src="@drawable/guide_spot"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

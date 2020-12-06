@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Unitystory"
+    android:background="@drawable/realimg"
+    android:orientation="vertical">
+
+
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="normal"
+            android:textSize="25sp"
+            android:textColor="#ffffff"
+            android:letterSpacing="-0.05"
+            android:lineSpacingExtra="4sp"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="532dp"
+            android:layout_marginLeft="87dp"
+
+            android:text="갑자기 집에\n공룡 알이 떨어졌어! "
+
+
+
+            />
+<Button
+    android:id="@+id/unitybtn"
+    android:layout_width="104.8dp"
+    android:layout_height="47.1dp"
+    android:layout_marginTop="30dp"
+    android:layout_marginLeft="128dp"
+    android:background="@drawable/storynextbtn"
+      android:textSize="24sp"
+    android:textColor="#6b548d"
+    android:lineSpacingExtra="5sp"
+    android:text="다음"
+
+    >
+
+
+</Button>
+
+
+
+
+
+
+</LinearLayout>

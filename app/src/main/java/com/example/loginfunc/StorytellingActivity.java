@@ -9,6 +9,7 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
 
 import com.android.volley.Response;
@@ -18,6 +19,13 @@ public class StorytellingActivity extends AppCompatActivity {
     private FragmentPagerAdapter fragmentPagerAdapter_story;
     public SharedPreferences prefs;
     private Button gotonext;
+
+
+
+
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +41,22 @@ public class StorytellingActivity extends AppCompatActivity {
         //TabLayout tabLayout = findViewById(R.id.tab_layout);
         viewPager_story.setAdapter(fragmentPagerAdapter_story);
         //tabLayout.setupWithViewPager(viewPager);
+        Button button1 = findViewById(R.id.storytelling_np1);
+        Button button2 = findViewById(R.id.storytelling_np2);
 
+
+
+}
+
+
+
+
+
+    public void moveNextpage(){
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        FragStory1 fragStory1 = new FragStory1();
+        transaction.replace(R.id.frameLayout, fragStory1);
+        transaction.commit();
     }
 
     public void movePage() {
@@ -41,4 +64,6 @@ public class StorytellingActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+
+
 }

@@ -54,6 +54,7 @@ public class GuideActivity extends AppCompatActivity {
 
                     Intent intent1 = new Intent(GuideActivity.this, MainActivity.class);
                     startActivity(intent1);
+                    overridePendingTransition(0, 0);
                     finish();
                 }
 

@@ -104,7 +104,8 @@ import org.json.JSONObject;
                                      editor.putBoolean("checkFisrt",true);
                                      editor.commit();
 
-                                     Intent intent1 = new Intent(LoginActivity.this, StorytellingActivity.class);
+                                     Intent intent1 = new Intent(LoginActivity.this, Unitystory.class);
+                                     overridePendingTransition(0, 0);
                                      startActivity(intent1);
                                      finish();
                                  }

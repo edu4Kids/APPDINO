@@ -25,6 +25,8 @@ public class ViewPagerAdpater extends FragmentPagerAdapter {
                 return FragTuesday.newInstance(activity);
             case 2:
                 return FragWednesday.newInstance(activity);
+            case 3:
+                return FragThursday.newInstance(activity);
             default:
                 return null;
         }
@@ -32,7 +34,7 @@ public class ViewPagerAdpater extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return 3;
+        return 4;
     }
 
     //상단 탭 레이아웃 인디케이터 선언

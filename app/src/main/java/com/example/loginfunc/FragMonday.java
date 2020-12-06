@@ -28,7 +28,7 @@ public class FragMonday extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.guide_1, container, false);
-        guide_button1 = view.findViewById(R.id.guide_button);
+        guide_button1 = view.findViewById(R.id.guide_button4);
 
         guide_button1.setOnClickListener(new View.OnClickListener() {
             @Override

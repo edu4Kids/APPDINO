@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/storytelling_prior_ar_bg">
+
+    <ImageView
+        android:id="@+id/storytelling_circle_out"
+        android:layout_width="322dp"
+        android:layout_height="322dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="118dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginBottom="300dp"
+        android:src="@drawable/storytelling_circle_out"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/storytelling_circle_in"
+        android:layout_width="258dp"
+        android:layout_height="258dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="51dp"
+        android:layout_marginBottom="331dp"
+        android:src="@drawable/storytelling_circle_in"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/storytelling_egg"
+        android:layout_width="228dp"
+        android:layout_height="194dp"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="191dp"
+        android:layout_marginEnd="73dp"
+        android:layout_marginBottom="353dp"
+        android:src="@drawable/storytelling_egg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/storytelling_ar_dec"
+        android:layout_width="186dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="87dp"
+        android:layout_marginTop="558dp"
+        android:layout_marginEnd="87dp"
+        android:layout_marginBottom="120dp"
+        android:src="@drawable/storytelling_ar_dec"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/storytelling_np"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="648dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginBottom="44dp"
+        android:background="@drawable/prec_shape"
+        android:text="공룡알 보기"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="165dp" />
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

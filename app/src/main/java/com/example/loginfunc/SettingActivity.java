@@ -26,7 +26,7 @@ public class SettingActivity extends AppCompatActivity {
     SessionManager sessionManager;
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
-
+   private Button prior_button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,7 +36,20 @@ public class SettingActivity extends AppCompatActivity {
         nicknameText = findViewById(R.id.nicknameText);
         Intent intent = getIntent();
         nicknameText.setText(usernickName);
+          prior_button = findViewById(R.id.prior_button);
 
+        prior_button.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            //set 버튼 클릭했을 때
+            public void onClick(View view) {
+                Intent intent = new Intent(SettingActivity.this,MainActivity.class); //로그인 버튼 클릭시 RegisterActivty로 이동
+
+                intent.putExtra("usernickName",usernickName);
+                startActivity(intent);
+
+            }
+        });
 
         final Button logoutButton = (Button) findViewById(R.id.logoutButton);//로그아웃버튼 찾
         sessionManager = new SessionManager(getApplicationContext());
