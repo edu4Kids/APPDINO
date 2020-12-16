@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         gotoGuide = findViewById(R.id.gotoGuide);
         gotoGuide.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view){
-                Intent intent1 = new Intent(MainActivity.this, GuideActivity.class);
+                Intent intent1 = new Intent(MainActivity.this, Guide_new1.class);
                 startActivity(intent1);
             }
         });

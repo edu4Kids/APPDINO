@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Guide_new1"
+    android:background="@drawable/backback1"
+    android:orientation="vertical"
+    >
+
+    <Button
+        android:id="@+id/guide_button4"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="21.8dp"
+        android:layout_marginLeft="287dp"
+
+        android:background="@drawable/guide_button"></Button>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+        <ImageView
+            android:id="@+id/guide_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+
+
+            android:background="@drawable/guide_profile"></ImageView>
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="63dp"
+            android:layout_height="80dp"
+          android:layout_marginTop="120dp"
+            android:layout_marginLeft="48dp"
+
+
+            android:background="@drawable/guide_turn">
+
+
+        </ImageView>
+        <ImageView
+            android:id="@+id/guide_de"
+            android:layout_width="110dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="190dp"
+            android:layout_marginLeft="121dp"
+            android:src="@drawable/guide_de"></ImageView>
+        <ImageView
+            android:id="@+id/guide_de2"
+            android:layout_width="206dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="225dp"
+            android:layout_marginLeft="77dp"
+            android:src="@drawable/guide_de2"></ImageView>
+
+        <Button
+            android:id="@+id/nextbtn"
+            android:layout_width="400dp"
+            android:layout_height="match_parent"
+            android:background="#00ff0000"></Button>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

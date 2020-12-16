@@ -24,7 +24,7 @@ public class Story3btn extends AppCompatActivity {
 //                FragMonday fragMonday = new FragMonday();
 //                fragMonday.setArguments(bundle);
 //                transaction.replace(R.id.frameLayout, fragMonday);
-         Intent intent = new Intent(Story3btn.this, GuideActivity.class);
+         Intent intent = new Intent(Story3btn.this, Guide_new1.class);
         startActivity(intent);
                 overridePendingTransition(0, 0);
        finish();

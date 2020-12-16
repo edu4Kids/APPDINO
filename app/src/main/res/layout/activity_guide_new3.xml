@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Guide_new1"
+    android:background="@drawable/background3"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/guide_button4"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="21.8dp"
+        android:layout_marginLeft="287dp"
+
+        android:background="@drawable/guide_button"></Button>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+        <Button
+            android:id="@+id/nextbtn"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:background="#00ff0000"></Button>
+        <ImageView
+            android:id="@+id/sinomenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="385dp"
+
+            android:background="@drawable/foodmenu"></ImageView>
+        <ImageView
+            android:id="@+id/guide_turn2"
+            android:layout_width="75dp"
+            android:layout_height="89dp"
+            android:layout_marginTop="340dp"
+            android:layout_marginLeft="30dp"
+
+            android:src="@drawable/guide_turn2"></ImageView>
+        <ImageView
+            android:id="@+id/sinoteeth"
+            android:layout_width="162dp"
+            android:layout_height="19dp"
+            android:layout_marginTop="310dp"
+            android:layout_marginLeft="99dp"
+            android:src="@drawable/food_sino"></ImageView>
+        <ImageView
+            android:id="@+id/guide_teeth"
+            android:layout_width="132dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="335dp"
+            android:layout_marginLeft="120dp"
+            android:src="@drawable/dfdf11111"></ImageView>
+
+        <Button
+            android:id="@+id/beforebtn"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:background="#00ff0000"></Button>
+        <Button
+            android:id="@+id/afterbtn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="100dp"
+            android:background="#00ff0000"></Button>
+
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

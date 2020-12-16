@@ -20,13 +20,6 @@ public class StorytellingActivity extends AppCompatActivity {
     public SharedPreferences prefs;
     private Button gotonext;
 
-
-
-
-
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

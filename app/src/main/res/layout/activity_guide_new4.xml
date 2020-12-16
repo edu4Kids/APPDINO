@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Guide_new1"
+    android:background="@drawable/background4"
+
+    >
+
+    <ImageView
+        android:id="@+id/settingicon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+
+       android:layout_marginLeft="20dp"
+        android:background="@drawable/guide4_sb"></ImageView>
+
+    <Button
+        android:id="@+id/guide_button4"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="21.8dp"
+        android:layout_marginLeft="287dp"
+
+        android:background="@drawable/guide_button"></Button>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="63dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="40dp"
+
+
+            android:background="@drawable/guide4_turn">
+
+
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/guide4_setting"
+            android:layout_width="54.3dp"
+            android:layout_height="25.5dp"
+            android:layout_marginLeft="138dp"
+            android:layout_marginTop="125dp"
+            android:background="@drawable/guide4_setting">
+
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/guide4_dec"
+            android:layout_width="178dp"
+            android:layout_height="41dp"
+            android:layout_marginLeft="89dp"
+            android:layout_marginTop="160dp"
+            android:background="@drawable/guide4_dec">
+
+
+        </ImageView>
+
+        <Button
+            android:id="@+id/beforebtn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="75dp"
+            android:background="#00ff0000"></Button>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

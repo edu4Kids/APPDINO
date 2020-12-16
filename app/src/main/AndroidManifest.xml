@@ -4,6 +4,7 @@
     package="com.example.loginfunc">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
 
     <application
         android:allowBackup="true"
@@ -12,8 +13,24 @@
         android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".Story3btn"></activity>
+        android:theme="@style/AppTheme.NoActionBar"
+        tools:replace="android:theme, android:icon">
+        <activity android:name=".Guide_new4"></activity>
+        <activity android:name=".Guide_new3" />
+        <activity android:name=".Guide_new2" />
+        <activity android:name=".Guide_new1" />
+        <activity android:name=".AppInstallActivity">
+
+            <!--
+            intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter
+            -->
+        </activity>
+        <activity android:name=".UnityHolderActivity" />
+        <activity android:name=".Story3btn" />
         <activity android:name=".Story2btn" />
         <activity android:name=".Story1btn" />
         <activity android:name=".Unitystory" />
@@ -29,18 +46,23 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            >
         </activity>
         <activity android:name=".MainActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".StorytellingActivity" />
         <activity android:name=".GuideActivity" />
-        <activity android:name=".LoginActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".LoginActivity" />
 
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider" />
+        </provider>
     </application>
 
 </manifest>

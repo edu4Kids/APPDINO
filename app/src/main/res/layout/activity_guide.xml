@@ -4,12 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GuideActivity">
+    tools:context=".GuideActivity"
+    android:background="#cc000000">
 
-<FrameLayout
-    android:id="@+id/frameLayout"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"></FrameLayout>
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="@+id/const_vp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/back1"></FrameLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/const_vp"
